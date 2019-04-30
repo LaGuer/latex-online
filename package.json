@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "mocha tests/*-test.js"
+    "test": "mocha tests/*-test.js",
+    "start": "pnpm install; node app.js"
   },
   "dependencies": {
     "compression": "^1.6.2",

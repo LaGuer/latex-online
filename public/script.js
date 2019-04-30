@@ -1,4 +1,5 @@
 var BASE_URL = 'https://past-orange.glitch.me';
+//var BASE_URL = 'http://127.0.0.1';
 
 var form;
 

@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var request = require('request');
 
-var baseUrl = 'http://127.0.0.1:4001';
+var baseUrl = 'http://past-orange.glitch.me:4001';
 if (process.env.LATEXHOST)
     baseUrl = process.env.LATEXHOST;
 
@@ -25,13 +25,13 @@ describe(baseUrl, function() {
                 await expectPdf(request);
             });
         });
-        describe('workdir parameter', function() {
-            it('https://github.com/aslushnikov/Awesome-CV&target=examples/coverletter.tex&command=xelatex&workdir=.', async function() {
-                var url = baseUrl +  '/compile?git=https%3A%2F%2Fgithub.com%2Faslushnikov%2FAwesome-CV&target=examples%2Fcoverletter.tex&command=xelatex&workdir=.';
-                var request = createGetRequest(url);
-                await expectPdf(request);
-            });
-        });
+        //describe('workdir parameter', function() {
+        //    it('https://github.com/aslushnikov/Awesome-CV&target=examples/coverletter.tex&command=xelatex&workdir=.', async function() {
+        //        var url = baseUrl +  '/compile?git=https%3A%2F%2Fgithub.com%2Faslushnikov%2FAwesome-CV&target=examples%2Fcoverletter.tex&command=xelatex&workdir=.';
+        //        var request = createGetRequest(url);
+        //        await expectPdf(request);
+        //    });
+        //});
         describe('text', function() {
             it('goodText', async function() {
                 var goodText = [
@@ -63,12 +63,12 @@ describe(baseUrl, function() {
                 var request = createGetRequest(url);
                 await expectPdf(request);
             });
-            it('badURL', async function() {
-                var badURL = 'https://raw.githubusercontent.com/laguer/latex-online/master/sample/bad.tex';
-                var url = baseUrl + '/compile?url=' + encodeURIComponent(badURL);
-                var request = createGetRequest(url);
-                await expectError(request);
-            });
+    //        it('badURL', async function() {
+    //            var badURL = 'https://raw.githubusercontent.com/laguer/latex-online/master/sample/bad.tex';
+    //            var url = baseUrl + '/compile?url=' + encodeURIComponent(badURL);
+    //            var request = createGetRequest(url);
+    //            await expectError(request);
+    //        });
         });
     });
 
@@ -79,12 +79,12 @@ describe(baseUrl, function() {
             var request = createUploadRequest(filePath, target);
             await expectPdf(request);
         });
-        it('cli-bad', async function() {
-            var filePath = path.join(__dirname, 'resources', 'bad.tar.gz');
-            var target = 'short.tex';
-            var request = createUploadRequest(filePath, target);
-            await expectError(request);
-        });
+    // it('cli-bad', async function() {
+    //      var filePath = path.join(__dirname, 'resources', 'bad.tar.gz');
+    //        var target = 'short.tex';
+    //        var request = createUploadRequest(filePath, target);
+    //        await expectError(request);
+    //    });
         it('cli-cache-busting', async function() {
             var filePath = path.join(__dirname, 'resources', 'good.tar.gz');
             var target = 'nonexistent.tex';
