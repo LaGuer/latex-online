@@ -15,7 +15,7 @@ if (location.search.length >= 1) {
             .filter(component => !component.startsWith('trackId'))
             .join('&');
 
-    ga('create', 'UA-31467918-1', 'auto');
+    ga('create', 'UA--1', 'auto');
     ga('set', 'page', virtualPageURL);
     ga('send', 'pageview', {
       'hitCallback': hitCallback

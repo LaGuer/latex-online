@@ -1,4 +1,4 @@
-var BASE_URL = 'https://latexonline.cc';
+var BASE_URL = 'https://past-orange.glitch.me';
 
 var form;
 

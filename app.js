@@ -33,7 +33,7 @@ function onInitialized(latex) {
     healthMonitor = new HealthMonitor(latexOnline);
 
     // Launch server.
-    var port = process.env.PORT || 2700;
+    var port = process.env.PORT || 4001;
     var listener = app.listen(port, () => {
         logger.info("Express server started", {
             port: listener.address().port,
@@ -90,7 +90,7 @@ async function handleResult(res, preparation, force, downloadName) {
 app.get('/version', (req, res) => {
     res.json({
         version: VERSION,
-        link: `http://github.com/aslushnikov/latex-online/commit/${VERSION}`
+        link: `http://github.com/laguer/latex-online/commit/${VERSION}`
     });
 });
 

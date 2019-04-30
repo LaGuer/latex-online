@@ -17,5 +17,5 @@ docker run \
     -p 2700:2700                `: # bind host port 2700 to containers 2700` \
     --env NODE_ENV='development'`: # launch in DEV environment` \
     --env PORT=2700             `: # define service HTTP port` \
-    aslushnikov/latex-online    `: # run image latex2` \
+    laguer/latex-online    `: # run image latex2` \
     /bin/bash -c "node node_modules/nodemon/bin/nodemon.js -e js,jade app.js"

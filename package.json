@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "mocha tests/*-test.js"
+    "start": "mocha tests/*-test.js"
   },
   "dependencies": {
     "compression": "^1.6.2",
