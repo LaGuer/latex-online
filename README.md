@@ -6,7 +6,7 @@
 <!-- links to your social media accounts -->
 [1]: http://www.twitter.com/latex_online
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
-[mybinder](https://mybinder.org/v2/gh/LaGuer/latex-online/blob/master/sample?urlpath=lab%2Ftree%2Fsample.tex)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/LaGuer/latex-online/master?urlpath=lab%2Ftree%2Fsample%2Fsample.tex)
 
 # About LaTeX.Online [![alt text][1.1]][1]
 
